@@ -1,0 +1,11 @@
+{
+  "name": "whatidoclient",
+  "version": "1.0.0",
+  "description": "react client for what i do habit tracking application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Weber",
+  "license": "ISC"
+}
