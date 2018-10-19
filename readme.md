@@ -13,4 +13,4 @@ Instead of setting big huge goals and marking your progress along the way, **Wha
 ----
 ### This is the client-side application, built in React
 
-WID's client manages state using **state management tool** and consumes a Python Falcon API **link here**
+WID's client manages state using **state management tool** and consumes a [Python Falcon API](https://github.com/webermn15/wid-api)

@@ -1,6 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
+import Auth from './Auth';
+import '@babel/polyfill';
 
 render(
-	<div>Home Page</div>, document.getElementById('root')
+	<Auth />, document.getElementById('root')
 )
