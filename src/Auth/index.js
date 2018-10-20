@@ -1,4 +1,7 @@
+import React from 'react';
 import UserForm from './UserForm';
+
+const UserContext = React.createContext();
 
 const LoginProps = {
 	fetchURL: 'login',
@@ -15,5 +18,5 @@ const CreateAccountProps = {
 }
 
 export {
-	UserForm, LoginProps, CreateAccountProps
+	UserForm, LoginProps, CreateAccountProps, UserContext
 }
