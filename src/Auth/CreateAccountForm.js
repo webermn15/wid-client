@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-export default class Auth extends Component {
-	constructor() {
-		super()
+export default class CreateAccountForm extends Component {
+	constructor(props) {
+		super(props)
 
 		this.state = {
 			username: '',
@@ -16,7 +16,7 @@ export default class Auth extends Component {
 
 	submitLogin = async () => {
 		try {
-			const response = await fetch('http://localhost:8000/login', {
+			const response = await fetch('http://localhost:8000/create', {
 				method: 'POST',
 				body: JSON.stringify(this.state),
 				headers: {
@@ -31,13 +31,13 @@ export default class Auth extends Component {
 	}
 
 	render() {
-		console.log(this.state)
 		return(
 			<div>
+				<h3>Create Account</h3>
 				<input name="username" type="text" placeholder="Username" onChange={e => this.handleChange(e)}/>
 				<input name="password" type="password" placeholder="Password" onChange={e => this.handleChange(e)}/>
-				<button onClick={() => this.submitLogin()}>Log In</button>
-				<div>Don't have an account? <a href="#">Create one</a></div>
+				<button onClick={() => this.submitLogin()}>Create Account</button>
+				<div>Have an account? <button onClick={() => this.props.toggle()}>Log in</button></div>
 			</div>
 		)
 	}
