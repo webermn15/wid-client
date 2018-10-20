@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { LoginForm, CreateAccountForm } from './Auth';
+import { UserForm, LoginForm, CreateAccountForm, LoginProps, CreateAccountProps } from './Auth';
 
 export default class App extends Component {
 	constructor() {
@@ -15,7 +15,7 @@ export default class App extends Component {
 	}
 
 	render() {
-		const authMethod = this.state.isLoggingIn ? <LoginForm toggle={this.toggleAuthMethod}/> : <CreateAccountForm toggle={this.toggleAuthMethod}/>
+		const authMethod = <UserForm {...(this.state.isLoggingIn ? LoginProps : CreateAccountProps)} toggle={this.toggleAuthMethod}/>
 		return(
 			<div>
 				{ authMethod }
