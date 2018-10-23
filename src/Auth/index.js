@@ -1,5 +1,6 @@
 import React from 'react';
 import UserForm from './UserForm';
+import { userData } from './reducers';
 
 const UserContext = React.createContext();
 
@@ -18,5 +19,5 @@ const CreateAccountProps = {
 }
 
 export {
-	UserForm, LoginProps, CreateAccountProps, UserContext
+	UserForm, LoginProps, CreateAccountProps, UserContext, userData
 }

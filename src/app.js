@@ -8,7 +8,7 @@ export default class App extends Component {
 
 		this.state = {
 			isLoggingIn: true,
-			authenticated: true,
+			authenticated: false,
 			user: {
 				username: 'Default User',
 				id: 1,
