@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
 import { userData } from './Auth';
+import { userActivityList } from './Landing/Activities';
 
-/* setting initial state for application */
+/* setting initial state for application
 const initState = {
-	user: {
+	userData: {
 		username: 'Default User',
 		id: 1,
 	},
@@ -21,31 +22,16 @@ const initState = {
 	]
 }
 
-/*
+
 writing hardcoded reducers for each part of state initially, refactor this later with a function that
 generates the generic types of reducers (boolean switches, complete object rewrites, etc)
 
 read: https://redux.js.org/recipes/reducing-boilerplate#generating-reducers 
 */
 
-/* write immutable array replacement stuff ahhh */
-const activityList = (state = initState.activityList, action) => {
-	switch (action.type) {
-		case 'SET_USER_ACTIVITIES':
-			return action.setActivities
-		case 'ADD_USER_ACTIVITY':
-			return [
-				...state,
-				action.addActivity
-			]
-		default:
-			return state
-	}
-}
-
 const widApp = combineReducers({
 	userData,
-	activityList
+	userActivityList
 })
 
 export default widApp;

@@ -1,23 +1,22 @@
-import React from 'react';
-import UserForm from './UserForm';
+import AuthContainer from './AuthContainer';
 import { userData } from './reducers';
-
-const UserContext = React.createContext();
 
 const LoginProps = {
 	fetchURL: 'login',
 	formTitle: 'Log In:',
 	buttonText: 'Log in',
-	callToActionText: "Don't have an account?"
+	callToActionText: "Don't have an account?",
+	ctaButtonText: "Create"
 }
 
 const CreateAccountProps = {
 	fetchURL: 'create',
 	formTitle: 'Create Account:',
 	buttonText: 'Create',
-	callToActionText: "Have an account?"
+	callToActionText: "Have an account?",
+	ctaButtonText: "Log In"
 }
 
 export {
-	UserForm, LoginProps, CreateAccountProps, UserContext, userData
+	AuthContainer, LoginProps, CreateAccountProps, userData
 }
