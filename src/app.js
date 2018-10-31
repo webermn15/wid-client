@@ -17,7 +17,6 @@ class App extends Component {
 	}
 
 	render() {
-		console.log(this.props)
 		const authenticated = !this.props.userData.username ? <AuthContainer {...(this.state.isLoggingIn ? LoginProps : CreateAccountProps)} toggle={this.toggleAuthMethod}/> : <Landing />
 		return(
 			<div>

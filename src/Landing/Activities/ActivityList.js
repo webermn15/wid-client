@@ -1,11 +1,11 @@
 import React from 'react';
 import ActivityListItem from './ActivityListItem';
 
-function ActivityList({activityList}) {
+function ActivityList({userActivityList}) {
 	return(
 		<ul>
 			{
-				activityList.map((act, i) => (
+				userActivityList.map((act, i) => (
 					<ActivityListItem key={act.id} {...act} />
 				))
 			}
