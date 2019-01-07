@@ -28,10 +28,14 @@ export default class UserForm extends Component {
 					'Content-Type': 'application/json'
 				}
 			})
-			const {user} = await response.json()
+			if (!response.ok) {
+				throw new Error('yeet')
+			}
+			const {user, userActivities} = await response.json()
 			this.props.setUser(user)
+			this.props.setUserActivities(userActivities)
 		} catch (error) {
-			console.log(error)
+			this.props.setUserError(error)
 		}
 	}
 
@@ -39,6 +43,7 @@ export default class UserForm extends Component {
 		return(
 			<div>
 				<h3>{this.props.formTitle}</h3>
+				<p>{}
 				<input name="username" type="text" placeholder="Username" onChange={e => this.handleChange(e)}/>
 				<input name="password" type="password" placeholder="Password" onChange={e => this.handleChange(e)}/>
 				<button onClick={() => this.submitForm()}>{this.props.buttonText}</button>

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { setUser } from './actions';
+import { setUser, setUserActivities, setUserError } from './actions';
 import UserForm from './UserForm';
 
 const mapStateToProps = (state, ownProps) => {
@@ -7,7 +7,9 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = {
-	setUser
+	setUser,
+	setUserActivities,
+	setUserError
 }
 
 const AuthContainer = connect(

@@ -4,8 +4,8 @@
   "description": "react client for what i do habit tracking application",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.config.js",
-    "build": "webpack src/index.js",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,9 +27,12 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
     "prop-types": "^15.6.2",
     "webpack": "^4.21.0",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.1.4"
   }
 }
